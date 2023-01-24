@@ -10,7 +10,7 @@ const uint16_t WAIT_TIME = 1000;
 #define MAX_DEVICES 4  // Instruksi untuk mengatur berapa banyak dotmatrix yang digunakan
 #define CLK_PIN   13   // Deklarasi CLK pada pin 13 Arduino
 #define DATA_PIN  11   // Deklarasi Data pada pin 11 Arduino
-#define CS_PIN    10   // Deklarasi CS pada pin 10 Arduino
+#define CS_PIN    10   // Deklarasi CS pada pin 10 Arduino 
  
 // Hardware SPI connection
 MD_Parola Mx = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
@@ -22,6 +22,7 @@ void setup(void)
   Mx.begin();         // instruksi untuk memulai 
   Mx.setIntensity(10); // instruksi untuk mengatur intensitas cahaya (0-15)
   Mx.setTextAlignment(PA_CENTER);
+  Mx.displayClear();
 }
  
 void loop(void)
